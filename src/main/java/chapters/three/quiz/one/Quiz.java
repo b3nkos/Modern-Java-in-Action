@@ -6,29 +6,29 @@ import java.util.function.Predicate;
 import java.util.function.ToIntFunction;
 
 public class Quiz {
-  public static void main(String[] args) {
-    // Before
-    ToIntFunction<String> stringToInt = (String string) -> Integer.parseInt(string);
+    public static void main(String[] args) {
+        // Before
+        ToIntFunction<String> stringToInt = (String string) -> Integer.parseInt(string);
 
-    // After
-    ToIntFunction<String> stringToInt2 = Integer::parseInt;
+        // After
+        ToIntFunction<String> stringToInt2 = Integer::parseInt;
 
-    // Before
-    BiPredicate<List<String>, String> contains = (list, element) -> list.contains(element);
+        // Before
+        BiPredicate<List<String>, String> contains = (list, element) -> list.contains(element);
 
-    // After
-    BiPredicate<List<String>, String> contains2 = List::contains;
-  }
+        // After
+        BiPredicate<List<String>, String> contains2 = List::contains;
+    }
 
-  public void callStartsWithNumber() {
-    // Before
-    Predicate<String> startsWithNumber = (String string) -> this.startsWithNumber(string);
+    public void callStartsWithNumber() {
+        // Before
+        Predicate<String> startsWithNumber = (String string) -> this.startsWithNumber(string);
 
-    // After
-    Predicate<String> startsWithNumber2 = this::startsWithNumber;
-  }
+        // After
+        Predicate<String> startsWithNumber2 = this::startsWithNumber;
+    }
 
-  private boolean startsWithNumber(String string) {
-    return true;
-  }
+    private boolean startsWithNumber(String string) {
+        return true;
+    }
 }

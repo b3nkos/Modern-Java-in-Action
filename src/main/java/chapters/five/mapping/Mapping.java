@@ -1,4 +1,6 @@
-package chapters.five;
+package chapters.five.mapping;
+
+import chapters.five.Dish;
 
 import java.util.Arrays;
 import java.util.List;

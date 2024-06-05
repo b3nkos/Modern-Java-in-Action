@@ -5,7 +5,9 @@ import chapters.six.Dish;
 import java.util.IntSummaryStatistics;
 
 import static chapters.six.Menu.menu;
-import static java.util.stream.Collectors.*;
+import static java.util.stream.Collectors.averagingInt;
+import static java.util.stream.Collectors.summarizingInt;
+import static java.util.stream.Collectors.summingInt;
 
 public class FindTotalNumberOfCalories {
   public static void main(String[] args) {

@@ -15,6 +15,12 @@ public class GeneralizedSummarizationWithReduction {
 
     System.out.println("\nTotal Calories: " + totalCalories);
 
+    Integer totalCalories2 = menu()
+      .stream()
+      .collect(reducing(0, Dish::calories, Integer::sum));
+
+    System.out.println("\nTotal Calories: " + totalCalories2);
+
     Optional<Dish> mostCalorieDish = menu()
       .stream()
       .collect(reducing((dish1, dish2) -> dish1.calories() > dish2.calories() ? dish1 : dish2));
